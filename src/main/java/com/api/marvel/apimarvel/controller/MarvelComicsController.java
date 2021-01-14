@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.api.marvel.apimarvel.controller.marvel.response.MarvelResponse;
-import com.api.marvel.apimarvel.service.impl.MarvelServiceImpl;
+import com.api.marvel.apimarvel.service.impl.MarvelComicsServiceImpl;
 
 @RestController
 @RequestMapping(value = "/marvel")
-public class MarvelController {
+public class MarvelComicsController {
 
-	MarvelServiceImpl service;
+	MarvelComicsServiceImpl service;
 
-	public MarvelController(MarvelServiceImpl service) {
+	public MarvelComicsController(MarvelComicsServiceImpl service) {
 		this.service = service;
 	}
 
