@@ -2,8 +2,6 @@ package com.api.marvel.apimarvel.controller;
 
 import static org.springframework.http.HttpStatus.OK;
 
-import java.util.List;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -23,8 +21,8 @@ public class MarvelController {
 	}
 
 	@ResponseStatus(OK)
-	@GetMapping()
-	public List<MarvelResponse> findAll() {
+	@GetMapping
+	public MarvelResponse findAll() {
 		return service.findAll();
 	}
 }
