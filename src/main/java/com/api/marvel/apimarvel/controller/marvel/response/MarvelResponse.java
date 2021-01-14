@@ -6,4 +6,6 @@ import lombok.Getter;
 public class MarvelResponse {
 	private String copyright;
 	private String attributionHTML;
+	
+	private DataResponse data;
 }
