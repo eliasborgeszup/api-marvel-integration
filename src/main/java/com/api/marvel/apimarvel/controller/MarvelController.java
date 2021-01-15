@@ -12,16 +12,16 @@ import com.api.marvel.apimarvel.service.impl.MarvelComicsServiceImpl;
 
 @RestController
 @RequestMapping(value = "/marvel")
-public class MarvelComicsController {
+public class MarvelController {
 
 	MarvelComicsServiceImpl service;
 
-	public MarvelComicsController(MarvelComicsServiceImpl service) {
+	public MarvelController(MarvelComicsServiceImpl service) {
 		this.service = service;
 	}
 
 	@ResponseStatus(OK)
-	@GetMapping
+	@GetMapping(value = "/comics")
 	public MarvelResponse findAll() {
 		return service.findAll();
 	}
